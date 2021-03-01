@@ -1,7 +1,7 @@
 package main
 
 import (
-	"flybees.com.cn/mdw/mdw-net/transport"
+	"github.com/seamine/mdw-net/transport"
 	"fmt"
 	"io/ioutil"
 	"log"

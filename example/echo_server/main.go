@@ -1,8 +1,8 @@
 package main
 
 import (
-	"flybees.com.cn/mdw/mdw-net/transport"
 	"log"
+	"github.com/seamine/mdw-net/transport"
 	"time"
 )
 

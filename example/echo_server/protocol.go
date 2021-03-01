@@ -1,8 +1,8 @@
 package main
 
 import (
-	"flybees.com.cn/mdw/mdw-net/codec"
-	"flybees.com.cn/mdw/mdw-net/transport"
+	"github.com/seamine/mdw-net/codec"
+	"github.com/seamine/mdw-net/transport"
 )
 
 /**

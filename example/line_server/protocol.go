@@ -1,9 +1,9 @@
 package main
 
 import (
-	"flybees.com.cn/mdw/mdw-net/coder"
-	"flybees.com.cn/mdw/mdw-net/cutter"
-	"flybees.com.cn/mdw/mdw-net/transport"
+	"github.com/seamine/mdw-net/codec"
+	"github.com/seamine/mdw-net/cutter"
+	"github.com/seamine/mdw-net/transport"
 )
 
 /**
@@ -31,7 +31,7 @@ func NewLineProtocol() LineProtocol {
 				Delimiter:"\r\n",
 			},
 		},
-		Coder: codec.ThroughoutCoder{},
+		Coder: codec.ThroughoutCodec{},
 	}
 
 	return protocol

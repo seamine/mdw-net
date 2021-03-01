@@ -1,9 +1,9 @@
 package main
 
 import (
-	"flybees.com.cn/mdw/mdw-net/cutter"
-	"flybees.com.cn/mdw/mdw-net/handler"
-	"flybees.com.cn/mdw/mdw-net/transport"
+	"github.com/seamine/mdw-net/cutter"
+	"github.com/seamine/mdw-net/handler"
+	"github.com/seamine/mdw-net/transport"
 )
 
 /**

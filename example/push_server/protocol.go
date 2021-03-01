@@ -2,8 +2,8 @@ package main
 
 import (
 	"encoding/binary"
-	"flybees.com.cn/mdw/mdw-net/cutter"
-	"flybees.com.cn/mdw/mdw-net/transport"
+	"github.com/seamine/mdw-net/cutter"
+	"github.com/seamine/mdw-net/transport"
 )
 
 /**

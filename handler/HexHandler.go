@@ -2,7 +2,7 @@ package handler
 
 import (
 	"encoding/hex"
-	"flybees.com.cn/mdw/mdw-net/transport"
+	"github.com/seamine/mdw-net/transport"
 	"log"
 )
 
