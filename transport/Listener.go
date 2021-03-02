@@ -15,7 +15,7 @@ import (
 
 type Listener struct {
 
-	EventMgr EventManager
+	EventMgr *EventManager
 
 	listener net.Listener
 
@@ -26,6 +26,7 @@ func NewListener(config ListenConfig) *Listener {
 
 	listener := Listener{}
 	listener.Config = config
+	listener.EventMgr = NewEventManager()
 
 	return &listener
 }

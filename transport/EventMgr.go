@@ -9,14 +9,21 @@ import "log"
  */
 
 type EventManager struct {
-
+	Hub PubSubHub
 }
 
 func NewEventManager() *EventManager {
-	return nil
+
+	em := EventManager{}
+	em.Hub.Init()
+
+	return &em
 }
 
 func (e *EventManager) Handle(eventId IoEventId, data *IoEventData) error  {
+
+	e.Hub.Publish(eventId, data)
+
 	switch eventId {
 	case IoEventAccepted:
 		log.Printf("[%v] %v connected\n", data.Conn.Id, data.Conn.endpoint)
@@ -25,6 +32,7 @@ func (e *EventManager) Handle(eventId IoEventId, data *IoEventData) error  {
 	case IoEventClosed:
 		log.Printf("[%v] %v closed\n", data.Conn.Id, data.Conn.endpoint)
 	}
+
 	return nil
 }
 

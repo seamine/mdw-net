@@ -56,7 +56,7 @@ func (c *Connection) Init(conn net.Conn) {
 	c.received = 0
 	c.sent = 0
 	c.connMgr = c.Listener.Config.ConnectionManager()
-	c.eventMgr = &c.Listener.EventMgr
+	c.eventMgr = c.Listener.EventMgr
 	c.upstreamDataHandlers = c.Listener.Config.Protocol().InputStack().GetDataHandler()
 	c.downstreamDataHandlers = c.Listener.Config.Protocol().OutputStack().GetDataHandler()
 	c.messageHandlers = c.Listener.Config.Protocol().GetMessageHandler()
@@ -79,7 +79,7 @@ func (c *Connection) Stop() {
 
 	c.eventMgr.EmitWillClose(c, nil)
 
-	c.conn.Close()
+	_ = c.conn.Close()
 
 	if c.connMgr != nil {
 		_ = c.connMgr.Delete(c)
